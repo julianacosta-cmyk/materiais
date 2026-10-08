@@ -33,7 +33,7 @@ import {
   Settings01Icon,
   Upload01Icon,
 } from "@/components/foundations/icons"
-import { Logo, LogoText } from "@/components/foundations/logo"
+import { InterceptLogo, Logo, LogoText } from "@/components/foundations/logo"
 import { SettingsDialog } from "@/components/settings/settings-dialog"
 import { isAuthEnabledAction, logoutAction } from "@/app/actions/auth"
 
@@ -73,6 +73,14 @@ export function AppSidebar(props: React.ComponentProps<typeof Sidebar>) {
       <Sidebar collapsible="icon" {...props}>
         <SidebarHeader>
           <div className="flex h-8 items-center gap-2 px-1 group-data-[collapsible=icon]:justify-center group-data-[collapsible=icon]:px-0">
+            <InterceptLogo
+              title="Intercept Brasil"
+              className="h-6 w-auto text-foreground group-data-[collapsible=icon]:hidden"
+            />
+            <div
+              aria-hidden
+              className="h-5 w-px bg-border group-data-[collapsible=icon]:hidden"
+            />
             <LogoText
               title={siteConfig.name}
               className="h-6 w-auto text-foreground group-data-[collapsible=icon]:hidden"

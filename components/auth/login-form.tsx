@@ -9,7 +9,7 @@ import { useTheme } from "next-themes"
 import { siteConfig } from "@/lib/config/site"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Logo } from "@/components/foundations/logo"
+import { InterceptLogo, Logo } from "@/components/foundations/logo"
 import { loginAction, type LoginState } from "@/app/actions/auth"
 
 const INITIAL_STATE: LoginState = { error: null }
@@ -34,7 +34,14 @@ export function LoginForm({
   return (
     <div className="w-full max-w-md space-y-6">
       <div className="space-y-4">
-        <Logo className="size-7 text-foreground" />
+        <div className="flex items-center gap-3">
+          <InterceptLogo
+            title="Intercept Brasil"
+            className="h-7 w-auto text-foreground"
+          />
+          <div aria-hidden className="h-6 w-px bg-border" />
+          <Logo className="size-7 text-foreground" />
+        </div>
         <div className="space-y-1">
           <h1 className="text-lg font-semibold tracking-tight">
             {t("signIn")}

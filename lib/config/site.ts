@@ -1,7 +1,7 @@
 const appUrl = process.env.NEXT_PUBLIC_APP_URL ?? "https://storageui.dev"
 
 export const siteConfig = {
-  name: "Storage UI",
+  name: "Intercept Upload Compartilhe",
   url: appUrl,
   websiteUrl: "https://storageui.dev",
   githubUrl: "https://github.com/hahahumble/storageui",
